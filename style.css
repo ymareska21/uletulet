@@ -3,7 +3,7 @@
    --primary-purple: #40534b;
    --green-accent: #10B981;
    --orange-accent: #F97316;
-   --light-green: #86EFAC;
+   --light-green: #e9e3c3;
    --dark-text: #1F2937;
 }
 
@@ -459,13 +459,18 @@ body {
 /* Bottom Cards Section */
 .cards-section {
    padding: 0 40px 40px;
-   max-width: 1400px;
+   max-width: 1200px;
    margin: 0 auto;
 }
 
 .cards-grid {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1.5fr 1fr;
+   gap: 30px;
+}
+.cards-grid2 {
+   display: grid;
+   grid-template-columns: 1fr 1.5fr;
    gap: 30px;
 }
 
@@ -483,8 +488,20 @@ body {
    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
 }
 
+.card-orange2 {
+   background: linear-gradient(135deg, #3dc485 0%, #0cea69 100%);
+}
+
 .card-green {
    background: linear-gradient(135deg, #86EFAC 0%, #10B981 100%);
+   flex-direction: column;
+   text-align: center;
+
+   padding: 40px;
+}
+
+.card-green2 {
+   background: linear-gradient(135deg, #040705 0%, #0f1714 100%);
    flex-direction: column;
    text-align: center;
    padding: 40px;
@@ -495,6 +512,7 @@ body {
    height: 100%;
    object-fit: cover;
 }
+
 
 .card-green h2 {
    font-size: 2.5rem;
@@ -948,36 +966,28 @@ body {
 /* Main Footer */
 .main-footer {
    background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
-   padding: 80px 40px;
-   text-align: center;
-}
-
-.footer-logo {
+   height: 100vh;
    display: flex;
    flex-direction: column;
+   justify-content: flex-end;
    align-items: center;
-   gap: 20px;
-}
-
-.logo-circle {
-   background: var(--light-green);
-   width: 80px;
-   height: 80px;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 2rem;
-   color: var(--dark-text);
-}
-
-.footer-logo h2 {
-   color: white;
-   font-size: 3rem;
-   font-weight: 900;
-   line-height: 0.9;
+   padding: 40px;
    text-align: center;
-}
+   color: white;
+   font-size: 3vw; /* responsive large font */
+   width: 100vw;   /* make sure it spans full width */
+   box-sizing: border-box; /* include padding in width */
+   border-radius:40px 40px  0 0 ;
+  
+ }
+
+ .main-footer img {
+   width: 100vw;
+   height: auto;
+   max-width: 600px; /* limit max width for large screens */
+   margin-bottom: -30px;
+ }
+
 
 .home-section {
    display: block;
@@ -1598,9 +1608,7 @@ body {
        padding: 40px 20px;
    }
 
-   .newsletter-form {
-       flex-direction: column;
-   }
+  
 
    .products-grid {
        grid-template-columns: 1fr;
