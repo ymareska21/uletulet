@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klane - Coffee Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">K/L</div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" onclick="showSection('home')">Home</a>
+                <a href="#" class="nav-item" onclick="showSection('menu')">Menu</a>
+                <a href="#" class="nav-item" onclick="showSection('products')">Products</a>
+                <a href="#" class="nav-item" onclick="showSection('locations')">Locations</a>
+                <a href="#" class="nav-item" onclick="showSection('contact')">Contact</a>
+                
+                <button class="profile-btn" onclick="showAuthModal()">
+                    <div class="profile-avatar" id="profileAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span id="profileText">Sign In</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="auth-modal">
+        <div class="auth-content">
+            <button class="close-auth" onclick="closeAuthModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="auth-header">
+                <h3>Welcome Back!</h3>
+                <p>Sign in to your Koffee Lane account</p>
+            </div>
+            
+            <div id="loginSuccess" class="success-message">
+                <i class="fas fa-check-circle"></i>
+                Welcome back! You're now signed in.
+            </div>
+            
+            <form class="auth-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="auth-btn" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </button>
+            </form>
+            
+            <div class="auth-switch">
+                <p>New to Koffee Lane? <a onclick="switchToRegister()">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="auth-modal">
+        <div class="auth-content">
+            <button class="close-auth" onclick="closeAuthModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="auth-header">
+                <h3>Join Koffee Lane</h3>
+                <p>Create your account and start your coffee journey</p>
+            </div>
+            
+            <div id="registerSuccess" class="success-message">
+                <i class="fas fa-check-circle"></i>
+                Account created! Welcome to Koffee Lane.
+            </div>
+            
+            <form class="auth-form" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="registerName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="registerEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="registerPassword" placeholder="Create a secure password" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="auth-btn" id="registerBtn">
+                    <i class="fas fa-user-plus"></i>
+                    Create Account
+                </button>
+            </form>
+            
+            <div class="auth-switch">
+                <p>Already have an account? <a onclick="switchToLogin()">Sign in here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <div id="home" class="home-section">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Floating Coffee Beans -->
+            <div class="coffee-bean"></div>
+            <div class="coffee-bean"></div>
+            <div class="coffee-bean"></div>
+            <div class="coffee-bean"></div>
+            <div class="coffee-bean"></div>
+            <div class="coffee-bean"></div>
+
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    KOFFEE<br>
+                    LANE
+                </h1>
+            </div>
+
+            <!-- Coffee Image Overlay -->
+            <div class="coffee-image">
+                <img src="/placeholder.svg?height=400&width=300" alt="Iced Coffee">
+            </div>
+        </section>
+
+        <!-- Bottom Cards Section -->
+        <section class="cards-section">
+            <div class="cards-grid">
+                <div class="card card-orange">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Delicious Pastry">
+                </div>
+                <div class="card card-green">
+                    <h2>The one® is back</h2>
+                    <p>Selected from the best coffee-growing regions around the world</p>
+                    <div class="framer-badge">
+                        <i class="fas fa-star"></i>
+                        Made in Framer
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Munch Section -->
+        <section class="munch-section">
+            <div class="munch-cards">
+                <div class="munch-card">
+                    <div class="floating-particles">
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                    </div>
+                    <div class="dessert-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Delicious Ice Cream Dessert">
+                    </div>
+                    <div class="branch-badge">
+                        <div class="top-text">MY BRANCH</div>
+                        <div class="heart">♥</div>
+                        <div class="bottom-text">SEASON</div>
+                    </div>
+                </div>
+                
+                <div class="munch-card purple">
+                    <div class="scrolling-menu-container">
+                        <div class="scrolling-text-line">
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-item-pill">Frappe Lane</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-item-pill">Choco Wave</span>
+                            <span class="menu-text">NEW MENU</span>
+                        </div>
+                        
+                        <div class="scrolling-text-line">
+                            <span class="menu-item-pill">Lane Soup</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-item-pill">Irish Vibes</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-item-pill">Mori Salad</span>
+                        </div>
+                        
+                        <div class="scrolling-text-line">
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-item-pill">Cool Brew</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-item-pill">Classic Blk</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-text">★</span>
+                        </div>
+                        
+                        <div class="scrolling-text-line">
+                            <span class="menu-item-pill">North Pole</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-text">NEW MENU</span>
+                            <span class="menu-item-pill">Latte Night</span>
+                            <span class="menu-text">★</span>
+                            <span class="menu-text">NEW MENU</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menu Section -->
+    <div id="menu" class="menu-section">
+        <div class="hero">
+            <div class="section-title">MENU</div>
+            <img src="https://i.imgur.com/L0wDY8j.png" alt="Chocolate Frappe" />
+        </div>
+        
+        <!-- Coffee Section 1 -->
+        <div class="coffee-section container my-5">
+            <h2 class="text-center fw-bold">Coffee</h2>
+            <p class="text-center text-muted">We have something for everyone</p>
+            <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/4zAfT9F.jpg" alt="Classic Blk" />
+                        <div>
+                            <strong>Classic Blk</strong>
+                            <p class="mb-0 text-muted">A bold, rich shot of pure coffee slowly roasted to perfection.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$12.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/nFvTXW7.jpg" alt="Irish Vibes" />
+                        <div>
+                            <strong>Irish Vibes</strong>
+                            <p class="mb-0 text-muted">Smooth espresso diluted with hot water for a mellow flavor.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$9.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/Ux6fytp.jpg" alt="Choco Wave" />
+                        <div>
+                            <strong>Choco Wave</strong>
+                            <p class="mb-0 text-muted">Espresso with a dollop of steamed milk foam for a balanced taste.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$19.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/9O3JPOx.jpg" alt="Cold War" />
+                        <div>
+                            <strong>Cold War</strong>
+                            <p class="mb-0 text-muted">Espresso topped with equal parts steamed milk and frothy foam.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$5.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/txx19Tf.jpg" alt="Latte Night" />
+                        <div>
+                            <strong>Latte Night</strong>
+                            <p class="mb-0 text-muted">Creamy steamed milk blended with rich espresso.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$14.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/XSS3Dwb.jpg" alt="Frappe Lane" />
+                        <div>
+                            <strong>Frappe Lane</strong>
+                            <p class="mb-0 text-muted">A delightful mix of espresso, steamed milk, and chocolate.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$4.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/LkrcHaJ.jpg" alt="Cool Brew" />
+                        <div>
+                            <strong>Cool Brew</strong>
+                            <p class="mb-0 text-muted">Hand-poured coffee highlighting intricate flavors and aromas.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$16.00</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/DrQgbGW.jpg" alt="North Pole" />
+                        <div>
+                            <strong>North Pole</strong>
+                            <p class="mb-0 text-muted">Smooth, slow-brewed coffee served chilled for a refreshing experience.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$24.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coffee Section 2 -->
+        <div class="coffee-section container my-5">
+            <h2 class="text-center fw-bold">Specialty Drinks</h2>
+            <p class="text-center text-muted">Our signature creations</p>
+            <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/4zAfT9F.jpg" alt="Classic Blk" />
+                        <div>
+                            <strong>Classic Blk</strong>
+                            <p class="mb-0 text-muted">A bold, rich shot of pure coffee slowly roasted to perfection.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$12.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/nFvTXW7.jpg" alt="Irish Vibes" />
+                        <div>
+                            <strong>Irish Vibes</strong>
+                            <p class="mb-0 text-muted">Smooth espresso diluted with hot water for a mellow flavor.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$9.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/Ux6fytp.jpg" alt="Choco Wave" />
+                        <div>
+                            <strong>Choco Wave</strong>
+                            <p class="mb-0 text-muted">Espresso with a dollop of steamed milk foam for a balanced taste.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$19.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/9O3JPOx.jpg" alt="Cold War" />
+                        <div>
+                            <strong>Cold War</strong>
+                            <p class="mb-0 text-muted">Espresso topped with equal parts steamed milk and frothy foam.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$5.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/txx19Tf.jpg" alt="Latte Night" />
+                        <div>
+                            <strong>Latte Night</strong>
+                            <p class="mb-0 text-muted">Creamy steamed milk blended with rich espresso.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$14.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/XSS3Dwb.jpg" alt="Frappe Lane" />
+                        <div>
+                            <strong>Frappe Lane</strong>
+                            <p class="mb-0 text-muted">A delightful mix of espresso, steamed milk, and chocolate.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$4.99</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/LkrcHaJ.jpg" alt="Cool Brew" />
+                        <div>
+                            <strong>Cool Brew</strong>
+                            <p class="mb-0 text-muted">Hand-poured coffee highlighting intricate flavors and aromas.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$16.00</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="coffee-card">
+                        <img src="https://i.imgur.com/DrQgbGW.jpg" alt="North Pole" />
+                        <div>
+                            <strong>North Pole</strong>
+                            <p class="mb-0 text-muted">Smooth, slow-brewed coffee served chilled for a refreshing experience.</p>
+                        </div>
+                        <span class="ms-auto fw-bold">$24.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div id="products" class="products-section">
+        <div class="products-header">
+            <div class="delivery-badge">
+                <i class="fas fa-truck"></i>
+            </div>
+            <h2>Roasted goodness to your doorstep!</h2>
+        </div>
+        <div class="products-grid">
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=300&width=250" alt="Kozmo Coffee">
+                </div>
+                <div class="product-info">
+                    <h3>Kozmo</h3>
+                    <p>Premium blend with rich chocolate notes</p>
+                    <div class="product-footer">
+                        <span class="price">$24.99</span>
+                        <button class="view-btn" onclick="location.href='productdeets.html'">View</button>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+       
+ 
+
+
+
+    <!-- About/Locations Section -->
+    <div id="about" class="about-section">
+        <div class="hero">
+            <div class="section-title">LOCATIONS</div>
+            <img src="https://i.imgur.com/L0wDY8j.png" alt="Chocolate Frappe" />
+        </div>
+        
+        <div class="about-content">
+            <h2>About Koffee Lane</h2>
+            <p>Welcome to Koffee Lane, where every cup tells a story. Since our founding, we've been passionate about bringing you the finest coffee experiences from around the world.</p>
+            <p>Our beans are carefully selected from the best coffee-growing regions, ensuring that every sip delivers exceptional quality and flavor. We believe that great coffee brings people together and creates moments worth savoring.</p>
+            <p>From our signature blends to seasonal specialties, we're committed to crafting the perfect cup for every coffee lover. Come visit us and discover your new favorite coffee experience.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Visit Our Cafe</h2>
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>123 Coffee Street<br>Downtown District<br>City, State 12345</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Hours</h3>
+                    <p>Monday - Friday: 6:00 AM - 8:00 PM<br>Saturday - Sunday: 7:00 AM - 9:00 PM</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Contact</h3>
+                    <p>Phone: (555) 123-KOFFEE<br>Email: hello@koffeelane.com</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3 style="margin-bottom: 20px; color: var(--primary-purple);">Get in Touch</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="Tell us about your coffee preferences..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cart Icon -->
+    <button class="cart-icon" onclick="openCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cartCount">0</span>
+    </button>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="closeCart()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be populated here -->
+            </div>
+            
+            <!-- ===== NEW DELIVERY OPTIONS SECTION ===== -->
+            <div id="deliveryOptions" class="delivery-options" style="display: none;">
+                <h4>Choose Delivery Method</h4>
+                
+                <div class="delivery-toggle">
+                    <button type="button" class="delivery-toggle-btn active" onclick="selectDeliveryOption('pickup')">
+                        <i class="fas fa-store"></i> Pickup
+                    </button>
+                    <button type="button" class="delivery-toggle-btn" onclick="selectDeliveryOption('delivery')">
+                        <i class="fas fa-truck"></i> Delivery
+                    </button>
+                </div>
+                
+                <div id="pickupInfo" class="pickup-info active">
+                    <h5><i class="fas fa-map-marker-alt"></i> Pickup Location</h5>
+                    <p>123 Coffee Street, Downtown District</p>
+                    <p>City, State 12345</p>
+                    <p class="pickup-time">Ready for pickup in 15-20 minutes</p>
+                </div>
+                
+                <div id="deliveryForm" class="delivery-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="deliveryName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="deliveryPhone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Street Address</label>
+                        <input type="text" id="deliveryStreet" placeholder="Enter your street address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" id="deliveryCity" placeholder="City" required>
+                        </div>
+                        <div class="form-group">
+                            <label>State</label>
+                            <input type="text" id="deliveryState" placeholder="State" required>
+                        </div>
+                        <div class="form-group">
+                            <label>ZIP</label>
+                            <input type="text" id="deliveryZip" placeholder="ZIP" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Special Instructions (Optional)</label>
+                        <textarea id="deliveryInstructions" rows="2" placeholder="Any special delivery instructions..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== END NEW DELIVERY OPTIONS SECTION ===== -->
+            
+            <div id="cartTotal" class="cart-total">
+                <!-- Total will be shown here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h2>Stay in touch!</h2>
+            <p>Subscribe to our newsletter to get the latest updates and offers</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-circle">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <h2>KOFFEE<br>LANE</h2>
+            </div>
+        </div>
+    </footer>
+
+    
+     <script src="script.js"></script>
+    
+</body>
+</html>

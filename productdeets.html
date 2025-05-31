@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Cold Brew</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Header -->
+   <header class="header">
+    <div class="header-content">
+        <div class="logo">K/L</div>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active" onclick="showSection('home')">Home</a>
+            <a href="#" class="nav-item" onclick="showSection('menu')">Menu</a>
+            <a href="#" class="nav-item" onclick="showSection('products')">Products</a>
+            <a href="#" class="nav-item" onclick="showSection('locations')">Locations</a>
+            <a href="#" class="nav-item" onclick="showSection('contact')">Contact</a>
+            
+            <button class="profile-btn" onclick="showAuthModal()">
+                <div class="profile-avatar" id="profileAvatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span id="profileText">Sign In</span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Product Image -->
+            <div class="product-image">
+                <div class="coffee-cup">
+                    <div class="ice-cubes"></div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-title">Cold Brew</h1>
+                <p class="product-price">Php 150</p>
+                <p class="product-description">Product Description</p>
+                
+                <!-- Size Options -->
+                <div class="size-options">
+                    <button class="size-btn active">Grande</button>
+                    <button class="size-btn">Supreme</button>
+                </div>
+
+                <!-- Add to Cart Button -->
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Size selection functionality
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelector('.add-to-cart').addEventListener('click', function() {
+            alert('Cold Brew added to cart!');
+        });
+    </script>
+</body>
+</html>
