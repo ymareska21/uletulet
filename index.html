@@ -157,9 +157,6 @@
             </div>
         </section>
 
-        <!-- Munch Section -->
-        
-
         <section class="cards-section">
             <div class="cards-grid2">
                 <div class="card card-orange2">
@@ -175,6 +172,7 @@
                 </div>
             </div>
         </section>
+    </div>
 
     <!-- Menu Section -->
     <div id="menu" class="menu-section">
@@ -195,7 +193,10 @@
                             <strong>Classic Blk</strong>
                             <p class="mb-0 text-muted">A bold, rich shot of pure coffee slowly roasted to perfection.</p>
                         </div>
-                        <span class="ms-auto fw-bold">$12.99</span>
+                        <div class="coffee-card-actions">
+                            <span class="ms-auto fw-bold">$12.99</span>
+                            <button class="add-btn" onclick="addToCart('1', 'Classic Blk', 12.99)">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -206,7 +207,10 @@
                             <strong>Irish Vibes</strong>
                             <p class="mb-0 text-muted">Smooth espresso diluted with hot water for a mellow flavor.</p>
                         </div>
-                        <span class="ms-auto fw-bold">$9.99</span>
+                        <div class="coffee-card-actions">
+                            <span class="ms-auto fw-bold">$9.99</span>
+                            <button class="add-btn" onclick="addToCart('2', 'Irish Vibes', 9.99)">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -217,7 +221,10 @@
                             <strong>Choco Wave</strong>
                             <p class="mb-0 text-muted">Espresso with a dollop of steamed milk foam for a balanced taste.</p>
                         </div>
-                        <span class="ms-auto fw-bold">$19.99</span>
+                        <div class="coffee-card-actions">
+                            <span class="ms-auto fw-bold">$19.99</span>
+                            <button class="add-btn" onclick="addToCart('3', 'Choco Wave', 19.99)">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -228,7 +235,10 @@
                             <strong>Cold War</strong>
                             <p class="mb-0 text-muted">Espresso topped with equal parts steamed milk and frothy foam.</p>
                         </div>
-                        <span class="ms-auto fw-bold">$5.99</span>
+                        <div class="coffee-card-actions">
+                            <span class="ms-auto fw-bold">$5.99</span>
+                            <button class="add-btn" onclick="addToCart('4', 'Cold War', 5.99)">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -239,7 +249,10 @@
                             <strong>Latte Night</strong>
                             <p class="mb-0 text-muted">Creamy steamed milk blended with rich espresso.</p>
                         </div>
-                        <span class="ms-auto fw-bold">$14.99</span>
+                        <div class="coffee-card-actions">
+                            <span class="ms-auto fw-bold">$14.99</span>
+                            <button class="add-btn" onclick="addToCart('5', 'Latte Night', 14.99)">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -250,7 +263,10 @@
                             <strong>Frappe Lane</strong>
                             <p class="mb-0 text-muted">A delightful mix of espresso, steamed milk, and chocolate.</p>
                         </div>
-                        <span class="ms-auto fw-bold">$4.99</span>
+                        <div class="coffee-card-actions">
+                            <span class="ms-auto fw-bold">$4.99</span>
+                            <button class="add-btn" onclick="addToCart('6', 'Frappe Lane', 4.99)">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -261,7 +277,10 @@
                             <strong>Cool Brew</strong>
                             <p class="mb-0 text-muted">Hand-poured coffee highlighting intricate flavors and aromas.</p>
                         </div>
-                        <span class="ms-auto fw-bold">$16.00</span>
+                        <div class="coffee-card-actions">
+                            <span class="ms-auto fw-bold">$16.00</span>
+                            <button class="add-btn" onclick="addToCart('7', 'Cool Brew', 16.00)">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
 
@@ -272,102 +291,10 @@
                             <strong>North Pole</strong>
                             <p class="mb-0 text-muted">Smooth, slow-brewed coffee served chilled for a refreshing experience.</p>
                         </div>
-                        <span class="ms-auto fw-bold">$24.99</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coffee Section 2 -->
-        <div class="coffee-section container my-5">
-            <h2 class="text-center fw-bold">Specialty Drinks</h2>
-            <p class="text-center text-muted">Our signature creations</p>
-            <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/4zAfT9F.jpg" alt="Classic Blk" />
-                        <div>
-                            <strong>Classic Blk</strong>
-                            <p class="mb-0 text-muted">A bold, rich shot of pure coffee slowly roasted to perfection.</p>
+                        <div class="coffee-card-actions">
+                            <span class="ms-auto fw-bold">$24.99</span>
+                            <button class="add-btn" onclick="addToCart('8', 'North Pole', 24.99)">Add to Cart</button>
                         </div>
-                        <span class="ms-auto fw-bold">$12.99</span>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/nFvTXW7.jpg" alt="Irish Vibes" />
-                        <div>
-                            <strong>Irish Vibes</strong>
-                            <p class="mb-0 text-muted">Smooth espresso diluted with hot water for a mellow flavor.</p>
-                        </div>
-                        <span class="ms-auto fw-bold">$9.99</span>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/Ux6fytp.jpg" alt="Choco Wave" />
-                        <div>
-                            <strong>Choco Wave</strong>
-                            <p class="mb-0 text-muted">Espresso with a dollop of steamed milk foam for a balanced taste.</p>
-                        </div>
-                        <span class="ms-auto fw-bold">$19.99</span>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/9O3JPOx.jpg" alt="Cold War" />
-                        <div>
-                            <strong>Cold War</strong>
-                            <p class="mb-0 text-muted">Espresso topped with equal parts steamed milk and frothy foam.</p>
-                        </div>
-                        <span class="ms-auto fw-bold">$5.99</span>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/txx19Tf.jpg" alt="Latte Night" />
-                        <div>
-                            <strong>Latte Night</strong>
-                            <p class="mb-0 text-muted">Creamy steamed milk blended with rich espresso.</p>
-                        </div>
-                        <span class="ms-auto fw-bold">$14.99</span>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/XSS3Dwb.jpg" alt="Frappe Lane" />
-                        <div>
-                            <strong>Frappe Lane</strong>
-                            <p class="mb-0 text-muted">A delightful mix of espresso, steamed milk, and chocolate.</p>
-                        </div>
-                        <span class="ms-auto fw-bold">$4.99</span>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/LkrcHaJ.jpg" alt="Cool Brew" />
-                        <div>
-                            <strong>Cool Brew</strong>
-                            <p class="mb-0 text-muted">Hand-poured coffee highlighting intricate flavors and aromas.</p>
-                        </div>
-                        <span class="ms-auto fw-bold">$16.00</span>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/DrQgbGW.jpg" alt="North Pole" />
-                        <div>
-                            <strong>North Pole</strong>
-                            <p class="mb-0 text-muted">Smooth, slow-brewed coffee served chilled for a refreshing experience.</p>
-                        </div>
-                        <span class="ms-auto fw-bold">$24.99</span>
                     </div>
                 </div>
             </div>
@@ -382,7 +309,30 @@
             </div>
             <h2>Roasted goodness to your doorstep!</h2>
         </div>
+
+        <div class="products-header">
+            <div class="category-buttons">
+                <button class="category-btn">Hot Drinks</button>
+                <button class="category-btn">Cold Drinks</button>
+                <button class="category-btn">Snacks</button>
+            </div>
+        </div>
+        
         <div class="products-grid">
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.jpg-3xOSzFEsrQ2ZMiFfe4ssd3kHteeZ3T.jpeg" alt="Cold Brew">
+                </div>
+                <div class="product-info">
+                    <h3>Cold Brew</h3>
+                    <p>Smooth, slow-brewed coffee served chilled for a refreshing experience</p>
+                    <div class="product-footer">
+                        <span class="price">Php 150</span>
+                        <button class="view-btn" onclick="openProductModal('p1', 'Cold Brew', 150, 'Smooth, slow-brewed coffee served chilled for a refreshing experience. Made with premium beans and steeped for 12 hours to extract the perfect balance of flavors.', 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.jpg-3xOSzFEsrQ2ZMiFfe4ssd3kHteeZ3T.jpeg')">View</button>
+                    </div>
+                </div>
+            </div>
+            
             <div class="product-item">
                 <div class="product-image">
                     <img src="/placeholder.svg?height=300&width=250" alt="Kozmo Coffee">
@@ -392,18 +342,26 @@
                     <p>Premium blend with rich chocolate notes</p>
                     <div class="product-footer">
                         <span class="price">$24.99</span>
-                        <button class="view-btn" onclick="location.href='productdeets.html'">View</button>
+                        <button class="view-btn" onclick="openProductModal('p2', 'Kozmo', 24.99, 'Premium blend with rich chocolate notes and hints of caramel. Perfect for those who enjoy a bold, full-bodied coffee experience.', '/placeholder.svg?height=300&width=250')">View</button>
                     </div>
                 </div>
             </div>
-            
+
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=300&width=250" alt="Espresso Blend">
+                </div>
+                <div class="product-info">
+                    <h3>Espresso Blend</h3>
+                    <p>Our signature espresso blend featuring premium beans</p>
+                    <div class="product-footer">
+                        <span class="price">$18.99</span>
+                        <button class="view-btn" onclick="openProductModal('p3', 'Espresso Blend', 18.99, 'Our signature espresso blend featuring beans from Colombia and Ethiopia. Rich, aromatic, and perfect for espresso-based drinks.', '/placeholder.svg?height=300&width=250')">View</button>
+                    </div>
+                </div>
             </div>
         </div>
-
-       
- 
-
-
+    </div>
 
     <!-- About/Locations Section -->
     <div id="about" class="about-section">
@@ -412,13 +370,55 @@
             <img src="https://i.imgur.com/L0wDY8j.png" alt="Chocolate Frappe" />
         </div>
         
-        <div class="about-content">
-            <h2>About Koffee Lane</h2>
-            <p>Welcome to Koffee Lane, where every cup tells a story. Since our founding, we've been passionate about bringing you the finest coffee experiences from around the world.</p>
-            <p>Our beans are carefully selected from the best coffee-growing regions, ensuring that every sip delivers exceptional quality and flavor. We believe that great coffee brings people together and creates moments worth savoring.</p>
-            <p>From our signature blends to seasonal specialties, we're committed to crafting the perfect cup for every coffee lover. Come visit us and discover your new favorite coffee experience.</p>
+    
+        <div class="locations-grid">
+            <div class="location-card">
+                <div class="location-image">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Cups and Cuddles Location">
+                </div>
+                <div class="location-info">
+                    <h3>Talisay</h3>
+                    <ul>
+                        <li>Exact Location</li>
+                        <li>Date</li>
+                        <li>Time</li>
+                        <li>Number</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-image">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Cups and Cuddles Location">
+                </div>
+                <div class="location-info">
+                    <h3>Talisay</h3>
+                    <ul>
+                        <li>Exact Location</li>
+                        <li>Date</li>
+                        <li>Time</li>
+                        <li>Number</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-image">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Cups and Cuddles Location">
+                </div>
+                <div class="location-info">
+                    <h3>Talisay</h3>
+                    <ul>
+                        <li>Exact Location</li>
+                        <li>Date</li>
+                        <li>Time</li>
+                        <li>Number</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+
 
     <!-- Contact Section -->
     <div id="contact" class="contact-section">
@@ -459,6 +459,49 @@
         </div>
     </div>
 
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="product-modal">
+    <!-- Close button positioned absolutely -->
+    <button class="close-product-modal" onclick="closeProductModal()">
+        <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="product-modal-content">
+        <div class="product-modal-grid">
+            <!-- Product Image -->
+            <div class="product-modal-image">
+                <img id="modalProductImage" src="/placeholder.svg" alt="">
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-modal-details">
+                <h1 id="modalProductName" class="product-modal-title"></h1>
+                <p id="modalProductPrice" class="product-modal-price"></p>
+                
+                <div class="product-modal-description">
+                    <h3>Product Description</h3>
+                    <p id="modalProductDescription"></p>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="product-modal-sizes">
+                    <h3>Size</h3>
+                    <div class="size-buttons">
+                        <button class="size-btn active" onclick="selectSize('Grande')">Grande</button>
+                        <button class="size-btn" onclick="selectSize('Supreme')">Supreme</button>
+                    </div>
+                </div>
+
+                <!-- Add to Cart Button -->
+                <button class="product-modal-add-cart" onclick="addProductToCart()">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Floating Cart Icon -->
     <button class="cart-icon" onclick="openCart()">
         <i class="fas fa-shopping-cart"></i>
@@ -479,7 +522,7 @@
                 <!-- Cart items will be populated here -->
             </div>
             
-            <!-- ===== NEW DELIVERY OPTIONS SECTION ===== -->
+            <!-- Delivery Options Section -->
             <div id="deliveryOptions" class="delivery-options" style="display: none;">
                 <h4>Choose Delivery Method</h4>
                 
@@ -532,7 +575,6 @@
                     </div>
                 </div>
             </div>
-            <!-- ===== END NEW DELIVERY OPTIONS SECTION ===== -->
             
             <div id="cartTotal" class="cart-total">
                 <!-- Total will be shown here -->
@@ -540,21 +582,15 @@
         </div>
     </div>
 
-    <!-- Newsletter Section -->
-    
-
     <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-logo">
-               
                 <img src="CC.png" alt="Koffee Lane Logo">
             </div>
         </div>
     </footer>
 
-    
-     <script src="script.js"></script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
