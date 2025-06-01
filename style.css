@@ -562,16 +562,7 @@ body {
 }
 
 /* Menu Section */
-.menu-section {
-  padding: 80px 40px;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: none;
-}
-
-.menu-section.active {
-  display: block;
-}
+contact
 
 /* Coffee Card Styles */
 .coffee-card {
@@ -676,7 +667,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-  padding: 80px 40px;
+ 
   max-width: 1400px;
   margin: 0 auto;
   display: none;
@@ -691,6 +682,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
+  padding: 80px 40px;
 }
 
 .contact-info h2 {
@@ -769,12 +761,7 @@ body {
 }
 
 /* Products Section */
-.products-section {
-  padding: 80px 40px;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: none;
-}
+
 
 .products-section.active {
   display: block;
@@ -817,8 +804,10 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   position: relative;
-  left:150px;
+  left:200px;
   margin-right: 20px;
+  width: 350px;
+  margin-bottom: 20px;
   
 }
 
@@ -961,7 +950,7 @@ body {
       flex-direction: column; /* Arrange buttons top-to-bottom */
       position: absolute;
       left: 10px; /* Position to the left */
-      top: 180px; /* Adjust top position */
+      top: 750px; /* Adjust top position */
       gap: 10px; /* Add spacing between buttons */
   
 }
@@ -1621,64 +1610,8 @@ body {
   }
 
   /* Locations Page */
-.locations-header {
-  background-color: var(--primary-color);
-  color: var(--white);
-  text-align: center;
-  padding: 4rem 2rem;
-}
+  .locationslocations-header {
+    border-bottom: 20px solid red; /* Use a bright color for testing */
 
-.locations-header h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.locations-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  display: grid;
-  gap: 2rem;
-}
-
-.location-card {
-  background-color: var(--white);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  gap: 2rem;
-}
-
-.location-image {
-  flex: 1;
-}
-
-.location-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.location-info {
-  flex: 1;
-  padding: 2rem;
-}
-
-.location-info h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.location-info ul {
-  list-style: none;
-}
-
-.location-info li {
-  padding: 0.5rem 0;
-  color: var(--light-text);
 }
 }
