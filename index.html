@@ -24,6 +24,7 @@
                 <button class="profile-btn" onclick="showAuthModal()">
                     <div class="profile-avatar" id="profileAvatar">
                         <i class="fas fa-user"></i>
+                    <!-- Ensure this closing tag has a matching opening tag -->
                     </div>
                     <span id="profileText">Sign In</span>
                 </button>
@@ -176,133 +177,56 @@
 
     <!-- Menu Section -->
     <div id="menu" class="menu-section">
-        <div class="hero">
-            <div class="section-title">MENU</div>
-            <img src="https://i.imgur.com/L0wDY8j.png" alt="Chocolate Frappe" />
-        </div>
+
+        <section class="menu-header d-flex justify-content-center align-items-center text-white text-center"
+        id="men"
+        style="background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple)); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; height: 450px;">
         
-        <!-- Coffee Section 1 -->
-        <div class="coffee-section container my-5">
-            <h2 class="text-center fw-bold">Coffee</h2>
-            <p class="text-center text-muted">We have something for everyone</p>
-            <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/4zAfT9F.jpg" alt="Classic Blk" />
-                        <div>
-                            <strong>Classic Blk</strong>
-                            <p class="mb-0 text-muted">A bold, rich shot of pure coffee slowly roasted to perfection.</p>
-                        </div>
-                        <div class="coffee-card-actions">
-                            <span class="ms-auto fw-bold">$12.99</span>
-                            <button class="add-btn" onclick="addToCart('1', 'Classic Blk', 12.99)">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/nFvTXW7.jpg" alt="Irish Vibes" />
-                        <div>
-                            <strong>Irish Vibes</strong>
-                            <p class="mb-0 text-muted">Smooth espresso diluted with hot water for a mellow flavor.</p>
-                        </div>
-                        <div class="coffee-card-actions">
-                            <span class="ms-auto fw-bold">$9.99</span>
-                            <button class="add-btn" onclick="addToCart('2', 'Irish Vibes', 9.99)">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/Ux6fytp.jpg" alt="Choco Wave" />
-                        <div>
-                            <strong>Choco Wave</strong>
-                            <p class="mb-0 text-muted">Espresso with a dollop of steamed milk foam for a balanced taste.</p>
-                        </div>
-                        <div class="coffee-card-actions">
-                            <span class="ms-auto fw-bold">$19.99</span>
-                            <button class="add-btn" onclick="addToCart('3', 'Choco Wave', 19.99)">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/9O3JPOx.jpg" alt="Cold War" />
-                        <div>
-                            <strong>Cold War</strong>
-                            <p class="mb-0 text-muted">Espresso topped with equal parts steamed milk and frothy foam.</p>
-                        </div>
-                        <div class="coffee-card-actions">
-                            <span class="ms-auto fw-bold">$5.99</span>
-                            <button class="add-btn" onclick="addToCart('4', 'Cold War', 5.99)">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/txx19Tf.jpg" alt="Latte Night" />
-                        <div>
-                            <strong>Latte Night</strong>
-                            <p class="mb-0 text-muted">Creamy steamed milk blended with rich espresso.</p>
-                        </div>
-                        <div class="coffee-card-actions">
-                            <span class="ms-auto fw-bold">$14.99</span>
-                            <button class="add-btn" onclick="addToCart('5', 'Latte Night', 14.99)">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/XSS3Dwb.jpg" alt="Frappe Lane" />
-                        <div>
-                            <strong>Frappe Lane</strong>
-                            <p class="mb-0 text-muted">A delightful mix of espresso, steamed milk, and chocolate.</p>
-                        </div>
-                        <div class="coffee-card-actions">
-                            <span class="ms-auto fw-bold">$4.99</span>
-                            <button class="add-btn" onclick="addToCart('6', 'Frappe Lane', 4.99)">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/LkrcHaJ.jpg" alt="Cool Brew" />
-                        <div>
-                            <strong>Cool Brew</strong>
-                            <p class="mb-0 text-muted">Hand-poured coffee highlighting intricate flavors and aromas.</p>
-                        </div>
-                        <div class="coffee-card-actions">
-                            <span class="ms-auto fw-bold">$16.00</span>
-                            <button class="add-btn" onclick="addToCart('7', 'Cool Brew', 16.00)">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="coffee-card">
-                        <img src="https://i.imgur.com/DrQgbGW.jpg" alt="North Pole" />
-                        <div>
-                            <strong>North Pole</strong>
-                            <p class="mb-0 text-muted">Smooth, slow-brewed coffee served chilled for a refreshing experience.</p>
-                        </div>
-                        <div class="coffee-card-actions">
-                            <span class="ms-auto fw-bold">$24.99</span>
-                            <button class="add-btn" onclick="addToCart('8', 'North Pole', 24.99)">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+          <h1 class="display-1 fw-bold">SHOP</h1>
+          <p class="lead fs-3 fw-semibold">Goodness to your doorstep.</p>
         </div>
-    </div>
-
+      </section>
+        
+            <div class="container my-5">
+                <div class="row bg-light rounded-4 shadow-sm overflow-hidden">
+                  <!-- Left: Image -->
+                  <div class="col-md-6 p-0">
+                    <img src="your-image.jpg" alt="Iced Coffee" class="img-fluid h-100 w-100 object-fit-cover">
+                  </div>
+              
+                  <!-- Right: Info -->
+                  <div class="col-md-6 d-flex flex-column justify-content-center p-5">
+                    <small class="text-muted">United States</small>
+                    <h1 class="fw-bold">NYC</h1>
+              
+                    <ul class="list-unstyled mt-4 mb-4">
+                      <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>123 Coffee Lane, Brewtown, USA</li>
+                      <li class="mb-2"><i class="bi bi-clock me-2"></i>All week: 7:00 AM - 7:00 PM</li>
+                      <li class="mb-2"><i class="bi bi-telephone me-2"></i>(123) 456-7890</li>
+                      <li class="mb-2"><i class="bi bi-envelope me-2"></i>info@brewhaven.com</li>
+                    </ul>
+              
+                    
+                  </div>
+                </div>
+              </div>
+              </div>
+    
+    
     <!-- Products Section -->
     <div id="products" class="products-section">
+
+     <section class="locations-header d-flex justify-content-center align-items-center text-white text-center"
+    id="prod"
+    style="background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple)); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; height: 450px;">
+    
+    <div>
+      <h1 class="display-1 fw-bold">SHOP</h1>
+      <p class="lead fs-3 fw-semibold">Goodness to your doorstep.</p>
+    </div>
+  </section>
+
         <div class="products-header">
             <div class="delivery-badge">
                 <i class="fas fa-truck"></i>
@@ -333,95 +257,66 @@
                 </div>
             </div>
             
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="/placeholder.svg?height=300&width=250" alt="Kozmo Coffee">
-                </div>
-                <div class="product-info">
-                    <h3>Kozmo</h3>
-                    <p>Premium blend with rich chocolate notes</p>
-                    <div class="product-footer">
-                        <span class="price">$24.99</span>
-                        <button class="view-btn" onclick="openProductModal('p2', 'Kozmo', 24.99, 'Premium blend with rich chocolate notes and hints of caramel. Perfect for those who enjoy a bold, full-bodied coffee experience.', '/placeholder.svg?height=300&width=250')">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="/placeholder.svg?height=300&width=250" alt="Espresso Blend">
-                </div>
-                <div class="product-info">
-                    <h3>Espresso Blend</h3>
-                    <p>Our signature espresso blend featuring premium beans</p>
-                    <div class="product-footer">
-                        <span class="price">$18.99</span>
-                        <button class="view-btn" onclick="openProductModal('p3', 'Espresso Blend', 18.99, 'Our signature espresso blend featuring beans from Colombia and Ethiopia. Rich, aromatic, and perfect for espresso-based drinks.', '/placeholder.svg?height=300&width=250')">View</button>
-                    </div>
-                </div>
-            </div>
+           </div>
+          
         </div>
-    </div>
+  
 
     <!-- About/Locations Section -->
-    <div id="about" class="about-section">
-        <div class="hero">
-            <div class="section-title">LOCATIONS</div>
-            <img src="https://i.imgur.com/L0wDY8j.png" alt="Chocolate Frappe" />
-        </div>
-        
-    
-        <div class="locations-grid">
-            <div class="location-card">
-                <div class="location-image">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Cups and Cuddles Location">
-                </div>
-                <div class="location-info">
-                    <h3>Talisay</h3>
-                    <ul>
-                        <li>Exact Location</li>
-                        <li>Date</li>
-                        <li>Time</li>
-                        <li>Number</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="location-card">
-                <div class="location-image">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Cups and Cuddles Location">
-                </div>
-                <div class="location-info">
-                    <h3>Talisay</h3>
-                    <ul>
-                        <li>Exact Location</li>
-                        <li>Date</li>
-                        <li>Time</li>
-                        <li>Number</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="location-card">
-                <div class="location-image">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Cups and Cuddles Location">
-                </div>
-                <div class="location-info">
-                    <h3>Talisay</h3>
-                    <ul>
-                        <li>Exact Location</li>
-                        <li>Date</li>
-                        <li>Time</li>
-                        <li>Number</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="locations" class="location-section">
 
+    <section class="locations-header d-flex justify-content-center align-items-center text-white text-center"
+    id="loc"
+    style="background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple)); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; height: 450px;">
+    
+    <div>
+      <h1 class="display-1 fw-bold">SHOP</h1>
+      <p class="lead fs-3 fw-semibold">Goodness to your doorstep.</p>
+    </div>
+  </section>
+    
+        <div class="container my-5">
+            <div class="row bg-light rounded-4 shadow-sm overflow-hidden">
+              <!-- Left: Image -->
+              <div class="col-md-6 p-0">
+                <img src="your-image.jpg" alt="Iced Coffee" class="img-fluid h-100 w-100 object-fit-cover">
+              </div>
+          
+              <!-- Right: Info -->
+              <div class="col-md-6 d-flex flex-column justify-content-center p-5">
+                <small class="text-muted">United States</small>
+                <h1 class="fw-bold">NYC</h1>
+          
+                <ul class="list-unstyled mt-4 mb-4">
+                  <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>123 Coffee Lane, Brewtown, USA</li>
+                  <li class="mb-2"><i class="bi bi-clock me-2"></i>All week: 7:00 AM - 7:00 PM</li>
+                  <li class="mb-2"><i class="bi bi-telephone me-2"></i>(123) 456-7890</li>
+                  <li class="mb-2"><i class="bi bi-envelope me-2"></i>info@brewhaven.com</li>
+                </ul>
+          
+                
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+          
 
     <!-- Contact Section -->
     <div id="contact" class="contact-section">
+
+        <section class="locations-header d-flex justify-content-center align-items-center text-white text-center"
+        id="cont"
+        style="background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple)); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; height: 450px;">
+        
+        <div>
+          <h1 class="display-1 fw-bold">SHOP</h1>
+          <p class="lead fs-3 fw-semibold">Goodness to your doorstep.</p>
+        </div>
+      </section>
+
+
         <div class="contact-grid">
             <div class="contact-info">
                 <h2>Visit Our Cafe</h2>
