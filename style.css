@@ -53,7 +53,7 @@ body {
 }
 
 .logo {
-  background-color: var(--light-green);
+  background-color: #fefbe9;
   color: var(--dark-text);
   padding: 12px 20px;
   border-radius: 25px;
@@ -63,7 +63,7 @@ body {
 }
 
 .nav-menu {
-  background-color: var(--light-green);
+  background-color: #fefbe9;
   padding: 12px 8px;
   border-radius: 25px;
   display: flex;
@@ -562,7 +562,7 @@ body {
 }
 
 /* Menu Section */
-contact
+
 
 /* Coffee Card Styles */
 .coffee-card {
@@ -797,17 +797,27 @@ contact
   gap: 30px;
 }
 
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;         /* ✔️ Allow items to wrap */
+  gap: 16px;               /* ✔️ Space between items */
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .product-item {
   background: white;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  position: relative;
-  left:200px;
-  margin-right: 20px;
-  width: 350px;
-  margin-bottom: 20px;
+  width: 300px; /* ↓ Reduced from 350px */
+  margin: 20px;
+ position: relative;
+left: 200px;
+  
   
 }
 
@@ -894,19 +904,17 @@ contact
 
 /* Product Detail Modal */
 .product-modal {
-   display: none;
-   position: absolute;
-   top: 100px; /* Position below the navbar */
-   left: 50%; /* Center horizontally */
-   transform: translateX(-50%); /* Adjust for centering */
-   width: 95%;
-   height: calc(100% - 70px); /* Adjust height to account for navbar */
-   background-color: #e5e7eb;
-   z-index: 1500; /* Lower than header z-index */
-   overflow-y: auto;
-   border-radius: 30px 30px 0 0; /* Rounded top corners */
-   box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
+  display: none;
+  position: absolute;
+  top: 550px;
+  left: 0;
+  width: 100%;
+  background-color: #e5e7eb;
+  z-index: 3000;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
 }
+
  .product-modal.active {
    display: block;
  }
@@ -949,15 +957,15 @@ contact
       display: flex;
       flex-direction: column; /* Arrange buttons top-to-bottom */
       position: absolute;
-      left: 10px; /* Position to the left */
-      top: 750px; /* Adjust top position */
+      left: 45px; /* Position to the left */
+     padding-bottom: 30px;
       gap: 10px; /* Add spacing between buttons */
   
 }
 
 .category-btn {
    padding: 10px 20px;
-   background-color: #f8f9fa;
+ 
    border: 1px solid #ddd;
    border-radius: 60px;
    cursor: pointer;
@@ -1613,5 +1621,81 @@ contact
   .locationslocations-header {
     border-bottom: 20px solid red; /* Use a bright color for testing */
 
+}
+
+/*testimonial*/
+
+.testimonial-grid {
+  column-count: 2;
+  column-gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media (min-width: 900px) {
+  .testimonial-grid {
+    column-count: 3;
+  }
+}
+
+.testimonial-box {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  padding: 20px;
+}
+
+.testimonial-box.image {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-box.image img {
+  width: auto;
+  height: 400px;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.quote-icon {
+  font-size: 24px;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+.quote-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.quote-author {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.testimonial-grid {
+  display: block; /* important */
+}
+
+
+
+
+.tall-image {
+  height: 1000px;
+  object-fit: cover;
+}
+.short-card {
+  max-height: 320px;
 }
 }
