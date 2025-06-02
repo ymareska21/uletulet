@@ -18,6 +18,8 @@ function showSection(sectionName) {
 
     
 
+    
+
   // Show selected section
   const targetSection = document.getElementById(getSectionId(sectionName))
   if (targetSection) {
@@ -551,6 +553,8 @@ style.textContent = `
     }
 `
 document.head.appendChild(style)
+
+
 
 
 //loc
